@@ -56,11 +56,6 @@ class ThemesFragment : Fragment() {
         ColorKeyApp.instance.themeManager.currentTheme = theme
         adapter.setSelectedTheme(theme.id)
         Toast.makeText(context, getString(R.string.toast_theme_applied), Toast.LENGTH_SHORT).show()
-        updatePreview(theme)
-    }
-    
-    private fun updatePreview(theme: KeyboardTheme) {
-        binding.previewCard.setCardBackgroundColor(theme.keyboardBackgroundColor)
     }
     
     override fun onDestroyView() {
