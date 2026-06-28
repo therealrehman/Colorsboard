@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.ColorKey" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@color/bg_light</item>
+    </style>
+    
+    <style name="Theme.ColorKey.Transparent" parent="Theme.ColorKey">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+    
+    <style name="Theme.ColorKey.BottomSheet" parent="Theme.ColorKey.Transparent">
+        <item name="android:windowAnimationStyle">@style/BottomSheetAnimation</item>
+    </style>
+    
+    <style name="BottomSheetAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+    
+    <style name="KeyBase">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/key_height</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/key_text_size</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:background">@drawable/key_background</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+    
+    <style name="KeySpecial" parent="KeyBase">
+        <item name="android:background">@drawable/key_special_background</item>
+        <item name="android:textColor">@color/text_light</item>
+    </style>
+    
+    <style name="KeyAction" parent="KeyBase">
+        <item name="android:background">@drawable/key_action_background</item>
+        <item name="android:textColor">@color/text_light</item>
+    </style>
+    
+    <style name="CardGlass">
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="cardBackgroundColor">@color/glass_white</item>
+        <item name="contentPadding">@dimen/card_padding</item>
+    </style>
+    
+    <style name="TabText" parent="TextAppearance.Material3.TitleSmall">
+        <item name="android:textColor">@color/tab_text_color</item>
+        <item name="textAllCaps">false</item>
+    </style>
+    
+    <style name="SliderColorKey" parent="Widget.Material3.Slider">
+        <item name="trackColorActive">@color/primary</item>
+        <item name="trackColorInactive">@color/primary_light</item>
+        <item name="thumbColor">@color/primary</item>
+    </style>
+</resources>
